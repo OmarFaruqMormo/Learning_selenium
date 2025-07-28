@@ -16,5 +16,6 @@ def valid_login():
 
     time.sleep(3)
     print("The title is", driver.title)
+
     return driver
 
