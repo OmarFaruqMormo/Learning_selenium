@@ -10,14 +10,11 @@ def valid_login():
 
     driver.find_element(By.XPATH,"//a[@class='ico-login']").click()
 
-
     lpage = loginpage(driver)
     lpage.login("omarfaruq.reza02@gmail.com","Brain001")
-    print("The title is",driver.title)
+
 
     time.sleep(3)
-    driver.quit()
-
-if __name__ == "__main__":
-    valid_login()
+    print("The title is", driver.title)
+    return driver
 
