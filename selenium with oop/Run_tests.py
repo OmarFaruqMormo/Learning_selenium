@@ -1,4 +1,6 @@
 import time
+from time import sleep
+
 from selenium import webdriver
 from test_login import valid_login
 from search_page import Search
@@ -21,6 +23,8 @@ cart.add_item_to_cart(0)
 time.sleep(2)
 cart.add_item_to_cart(2)
 time.sleep(5)
+cart.go_to_cart()
+time.sleep(3)
 
 
 driver.quit()
