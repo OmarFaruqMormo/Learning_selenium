@@ -1,13 +1,16 @@
 from selenium.webdriver.common.by import By
 
 
-class loginpage:
+class Loginpage:
     def __init__(self,driver):
         self.driver = driver
-
+    # Navigate to login page
+        self.driver.find_element(By.XPATH, "//a[@class='ico-login']").click()
+    #Elements in Login page
         self.username_input = (By.XPATH, "//input[@id='Email']")
         self.password_input= (By.XPATH, "//input[@id='Password']")
         self.login_btn= (By.XPATH, "//button[text()='Log in']")
+
 
     def enter_username(self,username):
         self.driver.find_element(*self.username_input).send_keys(username)
